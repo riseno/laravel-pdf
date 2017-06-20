@@ -3,7 +3,7 @@
 namespace niklasravnsborg\LaravelPdf;
 
 use Config;
-use mPDF;
+use Mpdf;
 
 /**
  * Laravel PDF: mPDF wrapper for Laravel 5
@@ -23,7 +23,7 @@ class Pdf {
 			define('_MPDF_SYSTEM_TTFONTS_CONFIG', __DIR__ . '/../mpdf_ttfonts_config.php');
 		}
 
-		$this->mpdf = new mPDF(
+		$this->mpdf = new Mpdf(
 			$this->getConfig('mode'),              // mode - default ''
 			$this->getConfig('format'),            // format - A4, for example, default ''
 			$this->getConfig('default_font_size'), // font size - default 0
